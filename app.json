@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A marketplace for selling the stuff you",
+    "githubUrl": "https://github.com/tiago-silva-analista/DoneWithIt"
   }
 }
