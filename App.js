@@ -1,33 +1,19 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, 
-          Text, 
-          View, 
-          Image,
-          TouchableWithoutFeedback, 
-          TouchableNativeFeedback, 
-          TouchableOpacity, 
-          TouchableHighlight, 
-          SafeAreaView,
-          Button,
-          StatusBar,
-          Platform,
-          Alert } from 'react-native';
+import { Dimensions,
+          Platform } from 'react-native';
+import {useDimensions, useDeviceOrientation} from '@react-native-community/hooks';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import ImageScreen from './app/screens/ImageScreen'
 
 export default function App() {
+  
   const handlePress = () => console.log("Text clicked");
+
+  const {landscape} = useDeviceOrientation();
+
   return (
-    
-    <SafeAreaView style={styles.container}>
-      <Button title="Click Me" onPress={handlePress}  />
-    </SafeAreaView>
+        <ImageScreen />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-});
