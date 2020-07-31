@@ -1,6 +1,7 @@
 import React from "react";
 
 import { View, ImageBackground, StyleSheet, Text, Image } from "react-native";
+import ButtonLogin from './../../components/ButtonLogin'
 
 function WelcomeScreen(props) {
   return (

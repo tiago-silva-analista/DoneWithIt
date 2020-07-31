@@ -1,6 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
+
 function ImageScreen(props) {
   return (
     <View style={styles.container}>
@@ -11,6 +12,7 @@ function ImageScreen(props) {
         resizeMode="contain"
         source={require("./../../../assets/chair.jpg")}
       />
+
     </View>
   );
 }
