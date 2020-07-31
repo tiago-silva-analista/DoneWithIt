@@ -3,9 +3,9 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import colors from "../../config/colors";
 
 
-function ButtonLogin({ title, onPress }) {
+function ButtonLogin({ title, onPress, color = "primary"}) {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity style={[styles.button, {backgroundColor: colors[color]}]} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -23,7 +23,9 @@ const styles = StyleSheet.create({
     elevation: 50,
     justifyContent: "center",
     alignItems: "center",
-    padding: 15,
+    padding: 10,
+    marginLeft: 20,
+    marginBottom:5,
     width: "90%",
   },
   text: {
