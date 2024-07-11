@@ -10,6 +10,8 @@ import ImageScreen from "./app/screens/ImageScreen";
 import ButtonLogin from "./app/components/ButtonLogin";
 import Card from "./app/components/Card";
 import { setStatusBarNetworkActivityIndicatorVisible } from "expo-status-bar";
+import ListingDetailScreen from "./app/screens/ListingDetailScreen";
+import MessagesScreen from "./app/components/MessagesScreen";
 
 export default function App() {
   const handlePress = () => console.log("Text clicked");
@@ -17,13 +19,16 @@ export default function App() {
   const { landscape } = useDeviceOrientation();
 
   return (
-    <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
-      <Card
-        title="Red Jacket for sale"
-        subtitle="$100"
-        image={require("./assets/jacket.jpg")}
-      />
-    </View>
-    //  <WelcomeScreen />
+    <MessagesScreen />
+    //<ListingDetailScreen />
+    // <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
+    //   <Card
+    //     title="Red Jacket for sale"
+    //     subtitle="$100"
+    //     image={require("./assets/jacket.jpg")}
+    //   />
+    // </View>
+    //<ImageScreen />
+    // <WelcomeScreen />
   );
 }
